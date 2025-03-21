@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoBot Interface</title>
+    <style>
+        /* Center content vertically and horizontally */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+            text-align: center;
+        }
+
+        button {
+            margin: 10px; /* Space between buttons */
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to CryptoBot</h1>
+    <button onclick="runBot()">Run Bot</button>
+    <button onclick="checkBalance()">Check Balance</button>
+    <div id="output"></div>
+
+    <script>
+        function runBot() {
+            fetch('/run-bot', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('output').innerText = "Bot Result: " + data.result;
+                });
+        }
+
+        function checkBalance() {
+            fetch('/balance')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('output').innerText = "Account Balance: " + data.balance + " USD";
+                });
+        }
+    </script>
+</body>
+</html>
