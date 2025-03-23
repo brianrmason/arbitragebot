@@ -31,7 +31,7 @@ class CryptoBotApp:
 if __name__ == "__main__":
     # Initialize CryptoBotApp with API keys and run the web app
     app = CryptoBotApp(
-        api_key="JR5fisLQPPnfgqqAamZXe9F2uGheZjdlVtYoULSwUhGT8Dl7v27URVwL58qbU81z",
-        secret_key="fRt0IIH6a0TmeB7HKVvyxqvpyTfec1delTvkZ4hZg95lSiu9MoHpplJgA460jlyK"
+        api_key="",
+        secret_key=""
     )
     app.run()
