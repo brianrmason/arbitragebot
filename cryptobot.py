@@ -11,9 +11,9 @@
 
 
 # ## define variable with API key from Binance
-# binance_api = "JR5fisLQPPnfgqqAamZXe9F2uGheZjdlVtYoULSwUhGT8Dl7v27URVwL58qbU81z"
+# binance_api = ""
 # ## define variable with secret API key from Binance
-# binance_secret = "fRt0IIH6a0TmeB7HKVvyxqvpyTfec1delTvkZ4hZg95lSiu9MoHpplJgA460jlyK"
+# binance_secret = ""
 
 # ## initialize client variable on US testnet
 # client = Client(binance_api, binance_secret, tld='us', testnet=True)
